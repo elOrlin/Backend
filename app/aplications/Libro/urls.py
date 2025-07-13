@@ -23,6 +23,5 @@ urlpatterns = [
     path('api/libro/posteriores/<aaaa:year>/', LibrosPosteriores.as_view()),
     path('api/libro/por-titulo/', LibrosPorTitulo.as_view()),
     path('api/filtrar/libros/', FiltrarLibros.as_view()),
-    path('api/libro/por-autor/', LibroAutor.as_view())
-
+    path('api/libro/por-autor/', LibroAutor.as_view()),
 ]

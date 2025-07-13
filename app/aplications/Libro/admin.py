@@ -26,5 +26,5 @@ class LibroAdmin(admin.ModelAdmin):
         'autor',
         'editorial',
         'date',
-       'front'
+        'front'
        )

@@ -7,6 +7,7 @@ class PaginationSerializer(pagination.PageNumberPagination):
     page_size = 3
     max_page_size = 50
 
+
 class AutorSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -16,6 +17,7 @@ class AutorSerializer(serializers.ModelSerializer):
             'last_name',
             'country'
         ]
+
 
 class LibroSerializer(serializers.ModelSerializer):
 

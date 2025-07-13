@@ -21,9 +21,13 @@ class Estudiante(models.Model):
 
 
 class Prestamo(models.Model):
-    book = models.ForeignKey(Libro, on_delete=models.CASCADE, verbose_name='Libro')
+    book = models.ForeignKey(Libro,
+                             on_delete=models.CASCADE,
+                             verbose_name='Libro')
     description = models.CharField('Descripcion', max_length=100, blank=True)
-    student = models.ForeignKey(Estudiante, on_delete=models.CASCADE, verbose_name="Estudiante")
+    student = models.ForeignKey(Estudiante,
+                                on_delete=models.CASCADE,
+                                verbose_name="Estudiante")
     date = models.DateField("Fecha", auto_now_add=True)
 
     objects = prestamoManager()
@@ -35,8 +39,11 @@ class Prestamo(models.Model):
     def __str__(self):
         return self.book.title + " - " + self.student.name
 
+
 class Devolucion(models.Model):
-    loan = models.ForeignKey(Prestamo, on_delete=models.CASCADE, verbose_name='Prestamo')
+    loan = models.ForeignKey(Prestamo,
+                             on_delete=models.CASCADE,
+                             verbose_name='Prestamo')
     date = models.TimeField(auto_now=False, auto_now_add=False)
 
     class Meta:
